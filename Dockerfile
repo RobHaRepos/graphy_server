@@ -1,8 +1,7 @@
 FROM node:hydrogen-bullseye
 
-# Update packages (git will already be patched)
 RUN apt-get update && \
-    apt-get install -y git && \
+    apt-get install --only-upgrade -y imagemagick && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY graphserver.js .
