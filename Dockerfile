@@ -1,5 +1,5 @@
 # Use a lightweight and more secure base image
-FROM node:18.20.8-alpine3.21
+FROM 	node:25.1.0-alpine3.21 
 
 # Install only required dependencies (if needed)
 RUN apk update && apk upgrade
